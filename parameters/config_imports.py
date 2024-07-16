@@ -18,11 +18,12 @@ from sidecar import Sidecar
 # Initialize Earth Engine
 # from parameters.config_gee import gee_cloud_project
 
-from modules.gee_initialize import initialize_ee
+from src.gee_initialize import initialize_ee
+
 initialize_ee()
 
 # Custom module imports
-from modules.agstack_to_gee import (
+from src.agstack_to_gee import (
     start_agstack_session,
     get_agstack_token,
     register_fc_and_append_to_csv,
@@ -34,22 +35,22 @@ from modules.agstack_to_gee import (
     geo_id_or_ids_to_feature_collection,
     shapefile_to_ee,
     ee_to_shapefile,
-    geojson_to_ee, 
+    geojson_to_ee,
     geojson_to_shapefile,
     shapefile_to_geojson,
     register_fc_and_set_geo_id,
     add_geo_ids_to_feature_col_from_lookup_df,
 )
-from modules.file_to_ceo import (
+from src.file_to_ceo import (
     get_ceo_url,
     whisp_stats_shapefile_and_ceo_url,
 )
-from modules.utils import (
+from src.utils import (
     collection_properties_to_df,
     remove_geometry_from_feature_collection,
     get_centroid,
 )
-from modules.tidy_tables import (
+from src.tidy_tables import (
     whisp_risk,
     add_eudr_risk_col,
     add_indicators,
@@ -68,7 +69,7 @@ from modules.tidy_tables import (
     get_order_list,
 
 )
-from modules.stats import (
+from src.stats import (
     get_stats,
     get_stats_formatted,
 )
